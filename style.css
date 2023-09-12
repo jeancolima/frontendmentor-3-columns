@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --fonte-primaria: 'Lexend Deca', sans-serif;
+    --fonte-secundaria: 'Big Shoulders Display', cursive;
+}
+
+body {
+    font-size: 16px;
+    color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsl(0, 0%, 95%);
+    box-sizing: border-box;
+}
+
+.cars-cards {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 300px;
+    min-height: 400px;
+    font-family: var(--fonte-primaria);
+    padding: 1rem;
+    margin: 0 2rem;
+}
+
+.sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 16px 16px 0 0;
+}
+
+.suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 16px 16px;
+}
+
+.card img {
+    width: 64px;
+    margin: 1rem 0 1rem 2rem;
+}
+
+.card h2 {
+    font-weight: bold;
+    font-size: 2em;
+    font-family: var(--fonte-secundaria);
+    margin: 0 0 0 2rem;
+    color: hsl(0, 0%, 95%);
+}
+
+.card p {
+    margin: 0 1.5em 0 2em;
+    line-height: 1.5rem;
+}
+
+.card button {
+    margin: 2em 0 0 2em;
+    width: 150px;
+    padding: 1em 0;
+    border-radius: 24px;
+    border: none;
+    font-weight: 600;
+    background-color: hsl(0, 0%, 95%);
+    font-size: 1rem;
+}
+
+.sedan button {
+    color: hsl(31, 77%, 52%);
+}
+
+.sedan button:hover {
+    background-color: hsl(31, 77%, 52%);
+    color: white;
+    border: 1px solid white;
+    transition: .4s;
+}
+
+.suv button {
+    color: hsl(184, 100%, 22%);
+}
+
+.suv button:hover {
+    background-color: hsl(184, 100%, 22%);
+    color: white;
+    border: 1px solid white;
+    transition: .4s;
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+}
+
+.luxury button:hover {
+    background-color: hsl(179, 100%, 13%);
+    color: white;
+    border: 1px solid white;
+    transition: .4s;
+}
+
+@media (min-width: 1024px) {
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .cars-cards {
+        grid-template-columns: repeat(3, 320px);
+        margin: 0;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .sedan {
+        grid-column: 1/2;
+    }
+    
+    .suv {
+        grid-column: 2/3;
+    }
+    
+    .luxury {
+        grid-column: 3/4;
+        border-radius: 0 16px 16px 0;
+    }
+
+    .sedan {
+        background-color: hsl(31, 77%, 52%);
+        border-radius: 16px 0 0 16px;
+    }
+
+}
